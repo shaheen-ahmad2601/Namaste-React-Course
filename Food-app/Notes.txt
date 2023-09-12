@@ -1,0 +1,26 @@
+- config driven ui. - 
+- ui layer + data layer -> makes frontend.
+- to see the actual api and can be used also, goto network then priview and refresh the page you will get the data.
+- we can take the json data and and can get the data in a single object or we can create the array of objects then we ca access that with index value , both approach is not good , we can also map our data to avoid the complexity of the code.
+
+- whatever the data is you can use map funciton to loop through the data and can render it.
+
+- we can also create react app with cdn links and just installing react and reactdom in our json file without installing it with proper setup 
+
+- we can pass the key in the component res.data.id for unique key to render a list.
+you have to always pass the key 
+
+=> why you need to pass the key , lets suppose a new card comes in the array so react does not know which cart just came in the array or which one has been rendered so that is why we need to pass the key so that react can track the card ids , if you dont pass the key then react will rerender all the cards and it will hamper the performance of the app.
+
+-> Container 
+  - card-1
+  - card-2
+  - card-3
+  - card-4
+
+  here these cards is not having any keys , lets suppose a new card comes in the array so what react will do it will render all the cards becasue react does not know which card is new bcos noone is having the key , then react will rerender all the cards again and will impact the performance of the app.
+
+  - map(res,index)- we can pass index as the key in 2nd parameter 
+  key={index} this looks fine logically but react does not recommends this to use.
+
+  - if there is no id in the data then we can use index as key

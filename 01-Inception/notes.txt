@@ -1,0 +1,97 @@
+
+HW- What is cdn
+what is cross origin
+
+when you do root.render(parent)
+the content in root div will get replaced with react content.
+
+npm init - to create the package.json file whether its frontend or backend
+package.json is a configuration for npm , why do we need package.json ?
+these packages also known as dependencies and npm manages that, what is the version of package what are the packages that we need to manage our project, package.json manages that.
+
+ - package.json - it keeps the track of what verson of that package is installed in our system.
+
+there are two types of dependencies 
+1. dev dependencies - it is generally required in development 
+2. Normal dependencies - it is required in production 
+
+npm install -D  parcel - we will install parcel as a dev dependencies. this is why -D means dev dependencies.
+
+
+#---> If you are getting some "htmlnono of node:os" errors then use htmlnono:2.0.3 and then run npm install it will get fixed 
+
+- caret and tilde 
+~version “Approximately equivalent to version”, will update you to all future patch versions, without incrementing the minor version. ~1.2.3 will use releases from 1.2.3 to <1.3.0.
+
+^version “Compatible with version”, will update you to all future minor/patch versions, without incrementing the major version. ^1.2.3 will use releases from 1.2.3 to <2.0.0.
+
+ - caret ^ - if you have install 2.5.1 and in future a new version comes then the parcel will automatically update the version if you have used caret.
+
+- tilde - if you have used tilde it will install the most updated version and it may not be compatible with your current app. so using caret is good and safe.
+
+npm is not node package manager but everything , it does not have the fullform but it works to manage the packages that is required to manage your app.
+
+
+- package-lock-json - it keeps the track of exact version or all the version to for the dependencies
+package.json and package-lock.json are two files that are used in Node.js to manage dependencies for a project.
+
+package.json is a versioning file that contains metadata about the project and lists all the dependencies required by the application. It is used to install multiple packages in your project. When you initialize your node application, you will see three files installed in your app that is node_modules, package.json, and package-lock.json.
+
+On the other hand, package-lock.json is a lockfile that holds information on the dependencies or packages installed for a node.js project, including their exact version numbers. It is created for locking the dependency with the installed version. It will install the exact latest version of that package in your application and save it in package.json. Without package-lock.json, there might be some differences in installed versions in different environments. To overcome this problem, package-lock.json is created to have the same results in every environment. It should be in source control with the package.json file because if any other user clones the project and installs dependencies then it will install the exact same dependencies as in package-lock.json to avoid differences.
+
+In summary, while package.json specifies which packages are required for your project, package-lock.json ensures that all installations of these packages are consistent across different environments
+
+node_modules - when we do npm i parcel it will install all the code and dependencies to run the parcel in our system node_modules keep all that file 
+
+- Transitive dependencies - In computer science, a transitive dependency is a relationship between three or more database columns, where two columns are functionally dependent on a third column. In other words, if column A determines column B and column B determines column C, then there is a transitive dependency between columns A and C.
+
+ - Express is a package to manage note projects but express is also having its own dependencies to run express and that dependencies also having their own dependencies that is called transitive dependencies.
+
+ express - dependencies abc - dependencies xyz etc.
+
+ express can also be dependent on lot of things and so on, 
+ node_modules are the collection of dependencies its a kind of database to manage all the stuffs that are needed to run the project.
+
+ node_modules - 5,113 Files, 836 Folders  268 mb
+
+ - npx - npx to execute a package , you are executing npm packages with npx command.
+
+ npm run start = npm start
+ npm run build = npm run build.
+
+
+
+ ------------------------------------------------EPISODE-3--------------------------------
+
+
+
+ JSX - jsx is not a part of react both are different, react can we weitten without jsx but jsx makes easy to write code and make it readable.
+
+ jsx got transpiled b4 it reaches to js engine.
+
+your js engine does not understand jsx so need a transpiler like babel to convert jsx into regular javascript.
+all the version of js js engine understands.
+babel is a js compiler or transpiler.
+
+babel is just a some piece of code that makes easy for browsers to render the code and can be load on dom. whether its older version of browsers or newers version it makes compatibal to browsers.
+
+use camelCase in jsx
+
+- <div tabindex="1">W3Schools</div><br>
+<div tabindex="3">Google</div><br>
+<div tabindex="2">Microsoft</div> 
+-> this is eg of navigating through tab
+
+
+#====> React Components
+-> React components.- everthing in react is a component.
+there are two types of React components
+1. Class based component
+2. functional based component
+
+ - class based component - this is from beginning and its a old method to create react based component, it is complicated also code readablity is also not easy in this.
+
+ - functional component - its a new and easy way to create a component in react and provides code readablity react team also recoments this.
+
+ class based component uses js classed to create React component
+ funcitonal based component uses js function to create React component.
