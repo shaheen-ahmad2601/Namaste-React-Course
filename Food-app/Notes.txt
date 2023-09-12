@@ -1,3 +1,24 @@
+
+/*
+Header
+ - Logo
+ -Nav items
+
+Body 
+- search
+- cartRestro container
+  - Restro cart
+    - img
+    - name of restro , start ratings , cuisine , deleviry time
+
+
+Footer
+- Copyrights
+- links
+-adress
+-contacts
+*/
+
 - config driven ui. - 
 - ui layer + data layer -> makes frontend.
 - to see the actual api and can be used also, goto network then priview and refresh the page you will get the data.
@@ -24,3 +45,27 @@ you have to always pass the key
   key={index} this looks fine logically but react does not recommends this to use.
 
   - if there is no id in the data then we can use index as key
+
+
+
+  ----------------------------------------Hooks lec-4------------------------------
+
+  make a file stucture 
+  use js or jsx extension doesnot matter both is being used to add functionality to the code.
+
+  - there are two types of exports 
+    - default export - I can export one time only 
+    - named export - but for multiple value we can use named export, use curly braces{} to import named export
+
+
+    react is having two layer
+     - UI layer
+     - data layer 
+     if the data layer is having only two data so the ui will render 2 data cards only
+
+     - React Hooks is normal js utility functions that enable the super power of hooks that we use , its a normal basic js code written with somw logic to perform some particular tasks
+
+     => in node_modules the react code is exported react file then we import it like react form "react"
+     => useState is exported as named function that is why we use like this {useState} from "react".
+
+     - whenever a state variable updates react rerender the components.
