@@ -69,3 +69,43 @@ you have to always pass the key
      => useState is exported as named function that is why we use like this {useState} from "react".
 
      - whenever a state variable updates react rerender the components.
+
+     - It keeps your data layer sync with UI layer , it rerenders so fast that dom gets updated in a fraction of sections. and data layer and UI layer are works in sync.
+
+     -----------------------Reconsilation algorithm------------------------
+
+  => Reconsilation algorithm also known as React fiver.
+  - In React, "reconciliation" refers to the process of updating the user interface (UI) to reflect changes in the underlying data or state. When you work with React, you typically describe how the UI should look based on the current state of your application, and React takes care of efficiently updating the actual DOM to match that description. This process of updating the DOM while minimizing unnecessary changes is what's known as reconciliation.
+
+  - React uses a virtual DOM (VDOM) to optimize this process. Here's a simplified overview of how reconciliation works:
+
+Render Phase: When changes occur in your application's state, React re-renders the component tree. However, instead of immediately updating the real DOM, it first creates a virtual representation of the DOM, known as the virtual DOM.
+
+Reconciliation: React then compares the new virtual DOM with the previous virtual DOM (the one from the last render) using a "diffing" algorithm. This algorithm determines the differences or changes between the two virtual DOM trees. This process is also referred to as "diffing" or "reconciliation."
+
+Update Phase: After identifying the differences, React calculates the most efficient way to update the real DOM to reflect these changes. It then applies the minimal set of changes needed to the actual DOM, rather than re-rendering the entire DOM tree.
+
+By performing this process, React ensures that updates to the UI are both efficient and consistent with the application's current state, without causing unnecessary work for the browser.
+
+Now, let's define the "diff algorithm" in more detail:
+
+Diff Algorithm (Reconciliation Algorithm): The diff algorithm, or reconciliation algorithm, is a core part of React's virtual DOM system. Its primary purpose is to determine the minimal number of DOM manipulations required to update the real DOM to match the current virtual DOM representation.
+
+Here's how the diffing algorithm works:
+
+Tree Comparison: React compares the new virtual DOM tree with the previous one, starting from the root node and traversing down the tree.
+
+Keyed Elements: React uses "keys" assigned to each element in the virtual DOM to identify elements that have moved or changed. Keys provide a hint to React about the identity of elements, making it easier to determine which elements should be updated, inserted, or removed.
+
+Efficiency: The algorithm is designed to be efficient, minimizing the number of actual DOM mutations. It tries to group similar operations together and avoid unnecessary updates.
+
+Reconciliation Strategies: React uses different strategies depending on the types of elements and their positions in the tree. It prioritizes updates to the most frequently changing parts of the UI.
+
+By using this diff algorithm, React ensures that the UI updates efficiently, providing a smooth user experience while minimizing unnecessary work for the browser, which is crucial for building responsive and performant web applications.
+
+==> why react is fast?
+- It has VDOM
+- It has diff algorithms which is very efficient.
+- It can do efficient dom manipulations
+- It does not touch the actual dom first 
+- It compares the changes in vdom and then updates the actual dom.

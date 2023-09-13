@@ -35,9 +35,14 @@ Dev docs official: [https://react.dev/]
 
 [https://parceljs.org/]
 
- # File structure
- [https://legacy.reactjs.org/docs/faq-structure.html]
+# File structure
 
- # React Hooks with Examples
- - [https://www.freecodecamp.org/news/react-hooks-cheatsheet/]
- - [https://blog.logrocket.com/react-hooks-cheat-sheet-solutions-common-problems/]
+[https://legacy.reactjs.org/docs/faq-structure.html]
+
+# React Hooks with Examples
+
+- [https://www.freecodecamp.org/news/react-hooks-cheatsheet/]
+- [https://blog.logrocket.com/react-hooks-cheat-sheet-solutions-common-problems/]
+
+# React Fiber - Read about VDOM and its working.
+[https://github.com/acdlite/react-fiber-architecture]
