@@ -7,6 +7,7 @@ export const ResturantCard = (props) => {
 
   const {
     name,
+    id,
     avgRating,
     cuisines,
     costForTwo,
@@ -23,6 +24,7 @@ export const ResturantCard = (props) => {
         alt="food-logo"
       />
       <h3>{name}</h3>
+      <h3>{id}</h3>
       <h3>{cuisines.join(" ")}</h3>
       <h4>{avgRating} Stars</h4>
       <h4>{costForTwo / 100}</h4>

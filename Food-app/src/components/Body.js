@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { ResturantCard } from "./ResturantCard";
-import resList from "../utils/mockData";
+// import resList from "../utils/mockData";
 
 export const Body = () => {
-  const [listOfRestro, setListOfRestro] = useState(resList); // this is destructuring concept.
+  const [listOfRestro, setListOfRestro] = useState([]); // this is destructuring concept.
   const [searchText, setSearchText] = useState("");
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-  // const fetchData = async () => {
-  //   try {
-  //     const data = await fetch(
-  //       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9622536&lng=77.6979885&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-  //     );
-  //     const json = await data.json();
-  //     setListOfRestro(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-  //     console.log("this is coming from api", json);
-  //   } catch (error) {
-  //     console.log("error fetching data", error);
-  //   }
-  // };
+  const fetchData = async () => {
+    try {
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9622536&lng=77.6979885&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      );
+      const json = await data.json();
+      setListOfRestro(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      console.log("this is coming from api", json);
+    } catch (error) {
+      console.log("error fetching data", error);
+    }
+  };
 
   if(listOfRestro.length===0){
     return <div>Loading...</div>

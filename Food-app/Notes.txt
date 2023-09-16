@@ -136,3 +136,35 @@ Monolithic and microservices
 eg: if there is a counter component and I am just incresing the value of counter then whole component will get rerender.
 
 - if you are typing something in the input field on every key press teh whole component will get rerender and refresh the ui.
+
+------------------------------------------LECTURE 7 ---------------------------------
+
+useEffect get rerender everytime page gets loaded, if we want to render this once then we pass the array dependencies.
+
+- use hooks inside the component.
+
+TO CREATE THE ROUTER , 
+- import createBrowserRouter form react-router-dom 
+- create the configuration for the routing
+- give the path and
+
+- configuration takes a list of object that defines the path of different pages.
+- RouterProvider will provide the routing configuration to the application
+
+
+- to create a custom error page you can create a component and then imprort the error page in the configuration and show the custom messages.
+- we can use useRouterError - this hooks gives the more informatin aobut the error.
+
+
+=> If you want to fix navbar at every page you will have to use "Outlet" and create a childeren routes for the App. the childen routes will get added to the Outlet component and will get rendered.
+
+=> To create the link you can use anchor tag or Link tag 
+- anchor tag - when you use anchor tag it will refresh the whole page and can create the delay 
+so its not recommended to use anchor tag in react.
+
+- Link is used to create the link in react , it does not refresh or reloading the whole page . it only changes the routes so quickly , so its better to use Link tag in react.
+
+
+=> There are two types of Routing in react 
+- client side routing
+- server side routing
