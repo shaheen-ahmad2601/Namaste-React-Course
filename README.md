@@ -46,3 +46,6 @@ Dev docs official: [https://react.dev/]
 
 # React Fiber - Read about VDOM and its working.
 [https://github.com/acdlite/react-fiber-architecture]
+
+# Microservices vs. monolithic architecture
+[https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith]

@@ -109,3 +109,30 @@ By using this diff algorithm, React ensures that the UI updates efficiently, pro
 - It can do efficient dom manipulations
 - It does not touch the actual dom first 
 - It compares the changes in vdom and then updates the actual dom.
+
+
+
+-----------------------------------------------lec-5--------------------------------
+
+Monolithic and microservices
+- There are  two approach to fetch data
+
+1. load - Api - render = 500ms - this is poor apprach
+2. load - render - api - render the data - this is better
+
+=> useEffect - its a hooks in react again a normal js funciton written some js logic behine the scene,
+- it has two arguments 
+1. a callback function
+2. a dependencies
+
+
+=> useEffect - when the page will get loaded on the ui and as soon as it finishes the render cycle then useEffect will get called with the help of callback function.
+
+- if you want to do something after the page loaded we can use useEffect to perform some tasks
+
+- shimmer UI
+
+- if we are changing the state of any part of the component then whole component will get rerender 
+eg: if there is a counter component and I am just incresing the value of counter then whole component will get rerender.
+
+- if you are typing something in the input field on every key press teh whole component will get rerender and refresh the ui.

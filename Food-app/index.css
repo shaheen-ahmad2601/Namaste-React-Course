@@ -61,3 +61,11 @@
   border-radius: 10px;
   border: 1px solid grey;
 }
+
+.login-btn{
+  padding: 0px 25px;
+  cursor: pointer;
+}
+.filter{
+  display: flex;
+}
