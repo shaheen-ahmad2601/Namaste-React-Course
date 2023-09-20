@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { ResturantCard } from "./ResturantCard";
 // import resList from "../utils/mockData";
 import Shimmer from "./Shimmer";
-// import { Link } from "react-router-dom";
 
 export const Body = () => {
   const [listOfRestro, setListOfRestro] = useState([]); // this is destructuring concept.
@@ -34,7 +33,7 @@ export const Body = () => {
   // }
 
   return listOfRestro.length === 0 ? (
-    <Shimmer />
+    <Shimmer/>
   ) : (
     <div className="body">
       <div className="filter">
@@ -73,9 +72,7 @@ export const Body = () => {
       </div>
       <div className="res-container">
         {listOfRestro.map((res) => (
-          <Link to={"/restaurant/" + res?.info.id}>
-            <ResturantCard resData={res} />
-          </Link>
+          <ResturantCard key={res?.info.id} resData={res} />
         ))}
       </div>
     </div>
