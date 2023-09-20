@@ -168,3 +168,10 @@ so its not recommended to use anchor tag in react.
 => There are two types of Routing in react 
 - client side routing
 - server side routing
+
+data - cards[2] - card.card. gridElements.infoWithStyle.restaurants.info
+
+useParams -useParams is a hook provided by the React Router library. It is used for accessing route parameters in a functional component. Route parameters are placeholders in the URL that allow you to capture dynamic values from the URL and use them in your components.
+
+
+- Link is also getting conveted into anchor tag behind the scene.

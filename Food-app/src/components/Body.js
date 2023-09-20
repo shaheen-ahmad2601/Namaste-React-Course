@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { ResturantCard } from "./ResturantCard";
 // import resList from "../utils/mockData";
+import Shimmer from "./Shimmer";
+// import { Link } from "react-router-dom";
 
 export const Body = () => {
   const [listOfRestro, setListOfRestro] = useState([]); // this is destructuring concept.
@@ -16,19 +18,24 @@ export const Body = () => {
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9622536&lng=77.6979885&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       const json = await data.json();
-      setListOfRestro(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      console.log("this is coming from api", json);
+
+      const testData =
+        json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants;
+      // console.log(testData);
+      setListOfRestro(testData);
+      console.log(listOfRestro);
     } catch (error) {
       console.log("error fetching data", error);
     }
   };
 
-  if(listOfRestro.length===0){
-    return <div>Loading...</div>
-  // here we can write shimmer ui code to show the fake data on ui untill the page gets loaded properly
-  }
+  // if (listOfRestro.length === 0) {
+  //   return <Shimmer />;
+  // }
 
-  return (
+  return listOfRestro.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <div className="search">
@@ -38,13 +45,12 @@ export const Body = () => {
             className="search-box"
             placeholder="search..."
             onChange={(e) => setSearchText(e.target.value)}
-            
           />
           <button
             onClick={(e) => {
               console.log(searchText);
-              const filteredRestaurants = listOfRestro.filter(
-                (res) => res.data.name.toLowerCase().includes(searchText.toLowerCase())
+              const filteredRestaurants = listOfRestro.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
               setListOfRestro(filteredRestaurants);
             }}
@@ -56,7 +62,7 @@ export const Body = () => {
           className="filter-btn"
           onClick={() => {
             const filteredList = listOfRestro.filter(
-              (res) => res.data.avgRating > 4
+              (res) => res.info.avgRating > 4
             );
             setListOfRestro(filteredList);
             console.log(filteredList);
@@ -67,7 +73,9 @@ export const Body = () => {
       </div>
       <div className="res-container">
         {listOfRestro.map((res) => (
-          <ResturantCard key={res.data.id} resData={res} />
+          <Link to={"/restaurant/" + res?.info.id}>
+            <ResturantCard resData={res} />
+          </Link>
         ))}
       </div>
     </div>
