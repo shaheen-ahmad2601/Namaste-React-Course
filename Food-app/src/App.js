@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component , lazy} from "react";
 import ReactDOM from "react-dom/client";
 import { Header } from "./components/Header";
 import { Body } from "./components/Body";
@@ -7,6 +7,15 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Grocery from "./components/Grocery";
+
+// to load the bundeling files we use lazy loading and has created the function below.
+// import is a call back function which takes the path.
+
+// lazy loading.
+// suspense loading
+
+const Grocery = lazy(()=> import("./components/Grocery"))
 
 const AppLayout = () => {
   return (
@@ -17,6 +26,8 @@ const AppLayout = () => {
   );
 };
 
+
+
 const appRounter = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +36,7 @@ const appRounter = createBrowserRouter([
       { path: "/", element: <Body /> },
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/grocery", element: <Grocery/> },
       { path: "/restaurant/:resId", element: <RestaurantMenu /> },
     ],
     errorElement: <Error />,

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ResturantCard } from "./ResturantCard";
 // import resList from "../utils/mockData";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 export const Body = () => {
   const [listOfRestro, setListOfRestro] = useState([]); // this is destructuring concept.
@@ -32,8 +33,15 @@ export const Body = () => {
   //   return <Shimmer />;
   // }
 
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false) {
+    return (
+      <h1>Looks like you are online</h1>
+    )
+  }
+
   return listOfRestro.length === 0 ? (
-    <Shimmer/>
+    <Shimmer />
   ) : (
     <div className="body">
       <div className="filter">

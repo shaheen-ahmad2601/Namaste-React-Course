@@ -49,3 +49,10 @@ Dev docs official: [https://react.dev/]
 
 # Microservices vs. monolithic architecture
 [https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith]
+
+# To load the files efficiently by creating small bundling of different components.
+ - chunking
+ - code spliting
+ - Dynamic Bundling.
+ - lazy loading
+ - on demand loading

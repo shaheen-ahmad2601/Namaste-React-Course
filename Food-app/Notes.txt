@@ -175,3 +175,36 @@ useParams -useParams is a hook provided by the React Router library. It is used 
 
 
 - Link is also getting conveted into anchor tag behind the scene.
+
+--------------------------------------------lec-8---------------------
+
+Rendering cycle
+-1.constructor - 2.render - 3.componentdidmount - > we make api call in componentDidMount sothat 
+constructor and render method can load the page instantly then we make api call in componentDidMount
+then rerender it with fetch data 
+
+
+
+------------------------------lec-9----------------------------------------------------
+
+Custom hooks
+Single Responsibility Principal - each of the components is should have the single responsibility
+
+Modularity - dividing into small components 
+ - Reusable
+ - maintanable
+ - testable
+
+
+
+ /*
+we can create custon hooks to do some particular things tasks like 
+- create a component to fetch the api 
+- and pass it to the other components to render it
+
+generally we fetch the api in same components and render that , it is manging rendring and fetching process also 
+so to optimize the apps we can create the custom hooks and can devide the the tasks logically for better optimization.
+ 
+*/ 
+
+- lasy loading - we will not load all the code at once , if we need contact page
