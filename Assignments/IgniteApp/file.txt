@@ -1,0 +1,48 @@
+Assignment - 2
+
+1. What is NPM ?
+NPM is used to manage the packages that are installed to run the code.
+
+2. What is ‘Parcel/Webpack’ ? Why do we need it ?
+Parcel is a bundler that builds dev, local server, HMR, Code splitting etc. Webpack is also a bundler similar to Parcel. It also helps us in image optimization, Tree shaking, File watching algorithms, consistent hashing.
+
+3. What is .parcel-cache ?
+.parcel-cache is the cache file that gets created when you run your code for the first time. It stored the latest result so that it reduces the build time when we run the code later in future.
+
+4. What is ‘npx’ ?
+Npx is Node package extension that can be used to install for the production build.
+
+5. What is difference between ‘dependencies’ and ‘devdependencies’ ?
+DevDependecy is for the development environment and Dependencies can be used in production environment also.
+
+6. What is Tree shaking ?
+Tree Shaking is removing the unwanted code from our code. It is used for as an optimization technique so we can avoid running the code that is not required.
+
+7. What is Hot Module Replacement ?
+When we make any changes in our code and save it, React automatically updates the browser with the changes saved so the user don’t have to refresh the browser everytime we make changes.
+
+8. List down 5 superpowers of parcel and explain any 3 of them ?
+Parcel does image optimization, creates a local server, Builds dev, Code splitting, Tree shaking, HMR, Error handling, Differential bundling..
+Creates a local server - Parcel creates a local server for our code on it’s own and it helps to run the code inside that server.
+Error handling - Parcel helps us in handling errors as it displays the errors explicitly on the browser.
+Differential Bundling - Parcel also helps us to support older version of browsers so our code can run on any desired environment.
+
+9. What is .gitignore ? what should we add or not add to it ?
+.gitignore is a file created to insert the files that are not required to be pushed on to github. We can add the files that can be installed when we initially import the code from github like node modules.
+
+10. What is the difference between package.json and package-lock.json ?
+Package.json is used for configurations that will be used in the code.
+Package-lock.json is used to keep the exact configuration that current code is using to run.
+
+11. Why should I not modify package-lock.json ?
+Because when we install the npm, it creates this package-lock.json with the exact configuration we will be using to run our code.
+
+12. What is Node-modules ? Is it a good idea to push onto github ?
+Node-modules is huge folder that has many files from which we can import the required files. It is not a good idea to push on to github because it occupies large space and also can be installed using npm.
+
+13. What is dist folder ?
+Dist folder is created during the production and it contains the minifised files.
+
+14. What is Browserslists ?
+We define on which browsers the code to be supported inside the browserslist.
+   
